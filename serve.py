@@ -11,7 +11,7 @@ load_dotenv()
 
 groq_api_key = os.getenv("GROQ_API_KEY")
 
-model = ChatGroq(model="DeepSeek-R1-Distill-Qwen-32b", api_key=groq_api_key)
+model = ChatGroq(model="Qwen-Qwq-32b", api_key=groq_api_key)
 
 # 1. Create prompt template
 system_template = "Translate the following into {language}:"
@@ -47,6 +47,6 @@ add_routes(
 
 if __name__=="__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8080)
+    uvicorn.run(app, host="127.0.0.1", port=5300)
     
     
